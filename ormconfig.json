@@ -2,23 +2,22 @@
     "type": "postgres",
     "host": "localhost",
     "port": 5432,
-    "username": "test",
-    "password": "test",
-    "database": "test",
-    "synchronize": true,
-    "logging": false,
+    "username": "postgres",
+    "password": "postgres",
+    "database": "postgres",
+    "autoSchemaSync": true,
     "entities": [
-       "src/entity/**/*.ts"
+      "src/models/**/*.{js,ts}"
     ],
     "migrations": [
-       "src/migration/**/*.ts"
+      "src/database/migrations/**/*.{js,ts}"
     ],
     "subscribers": [
-       "src/subscriber/**/*.ts"
+      "src/database/subscriber/**/*.{js,ts}"
     ],
     "cli": {
-       "entitiesDir": "src/entity",
-       "migrationsDir": "src/migration",
-       "subscribersDir": "src/subscriber"
+       "entitiesDir": "src/models",
+       "migrationsDir": "src/database/migrations",
+       "subscribersDir": "src/database/subscriber"
     }
  }
